@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#111318">
+    <title>주 2회 전신 머신 루틴</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="timer-bar" aria-live="polite">
+        <div>
+          <p class="eyebrow" id="timerLabel">대기 중</p>
+          <h1 id="timerValue">00:00</h1>
+        </div>
+        <button class="icon-button" id="pauseButton" type="button" aria-label="타이머 일시정지">
+          <span id="pauseIcon">II</span>
+        </button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-figure" aria-hidden="true">
+          <div class="plate plate-left"></div>
+          <div class="bar"></div>
+          <div class="plate plate-right"></div>
+        </div>
+        <div>
+          <p>머신 위주 50분</p>
+          <h2>전신 루틴</h2>
+        </div>
+        <div class="routine-tabs" role="tablist" aria-label="루틴 선택">
+          <button class="tab active" id="tabA" type="button" role="tab" aria-selected="true">A</button>
+          <button class="tab" id="tabB" type="button" role="tab" aria-selected="false">B</button>
+        </div>
+      </section>
+
+      <section class="current-panel" aria-labelledby="currentTitle">
+        <div class="progress-row">
+          <span id="routineName">루틴 A</span>
+          <span id="exerciseCount">1 / 4</span>
+        </div>
+        <h2 id="currentTitle">레그 프레스</h2>
+        <p id="targetText">하체 전반 / 엉덩이</p>
+
+        <div class="exercise-visual" id="exerciseVisual" aria-hidden="true"></div>
+
+        <div class="set-strip" id="setStrip" aria-label="세트 진행 상태"></div>
+
+        <div class="cue-box">
+          <strong id="repText">12회</strong>
+          <p id="cueText">발판의 위쪽에 발을 넓게 대고, 발뒤꿈치로 묵직하게 밀어내세요.</p>
+        </div>
+      </section>
+
+      <section class="list-section" aria-label="운동 목록">
+        <div class="section-title">
+          <h2>오늘 순서</h2>
+          <button id="resetButton" type="button">처음부터</button>
+        </div>
+        <div id="exerciseList" class="exercise-list"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-actions" aria-label="운동 조작">
+      <button class="secondary" id="prevButton" type="button">이전</button>
+      <button class="primary" id="mainButton" type="button">운동 시작</button>
+      <button class="secondary" id="nextButton" type="button">다음</button>
+    </nav>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
